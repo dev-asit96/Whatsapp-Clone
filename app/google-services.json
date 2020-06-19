@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "911273446845",
+    "firebase_url": "https://chatoo-445ea.firebaseio.com",
+    "project_id": "chatoo-445ea",
+    "storage_bucket": "chatoo-445ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:911273446845:android:8e5aea3d720ac2a2c8d6d4",
+        "android_client_info": {
+          "package_name": "com.asit.chatoo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "911273446845-rrudjci6c6njelub1r9ddc7328s4csid.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZY60JM6boxpF4bMsJFLCur9DxhtK1KdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "911273446845-rrudjci6c6njelub1r9ddc7328s4csid.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
