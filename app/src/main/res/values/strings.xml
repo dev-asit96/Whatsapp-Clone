@@ -13,4 +13,5 @@
     <string name="username">username</string>
     <string name="type_a_message">Type a message...</string>
     <string name="hello">hello</string>
+    <string name="login_page">Login Page</string>
 </resources>
