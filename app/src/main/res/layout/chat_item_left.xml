@@ -14,11 +14,18 @@
         android:id="@+id/show_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/profile_image_left"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/profile_image_left"
         android:background="@drawable/background_left"
         android:padding="8dp"
         android:text="@string/hello"
         android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txt_seen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/show_message"
+        android:visibility="gone" />
 
 </RelativeLayout>

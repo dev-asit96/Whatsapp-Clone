@@ -14,4 +14,11 @@
     <string name="type_a_message">Type a message...</string>
     <string name="hello">hello</string>
     <string name="login_page">Login Page</string>
+    <string name="profile">profile</string>
+    <string name="search">Search...</string>
+    <string name="seen">Seen</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="email_address">Email Address</string>
+    <string name="warning_msg">By Clicking RESET Button, you will receive an email to reset password</string>
+    <string name="reset">Reset</string>
 </resources>

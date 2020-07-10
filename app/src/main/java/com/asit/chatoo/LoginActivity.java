@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -23,8 +23,8 @@ public class LoginActivity extends AppCompatActivity {
 
     MaterialEditText email, password;
     Button btn_login;
-    private ProgressBar progressbar;
 
+    TextView forgot_password;
     FirebaseAuth auth;
 
     @Override
@@ -41,27 +41,35 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
 
-        progressbar = findViewById(R.id.progressBar);
+        forgot_password = findViewById(R.id.forgot_password);
+        forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, ResetPasswordActivity.class));
+            }
+        });
+
         btn_login = findViewById(R.id.btn_login);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*final ProgressDialog pd = new ProgressDialog(LoginActivity.this);
+                pd.setMessage("Please wait...");
+                pd.show();*/
 
                 String txt_username = Objects.requireNonNull(email.getText()).toString();
                 String txt_password = Objects.requireNonNull(password.getText()).toString();
 
-//                if (TextUtils.isEmpty(txt_username) || TextUtils.isEmpty(txt_password)) {
-                //Toast.makeText(LoginActivity.this, "All Fields required!", Toast.LENGTH_LONG).show();
+                /* if (txt_username.equals("") || txt_password.equals("")) {*/
+                //   Toast.makeText(LoginActivity.this, "All Fields required!", Toast.LENGTH_LONG).show();
                 auth.signInWithEmailAndPassword(txt_username, txt_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressbar.setVisibility(View.VISIBLE);
                         if (task.isSuccessful()) {
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
                             finish();
-                            progressbar.setVisibility(View.GONE);
                         } else
                             Toast.makeText(LoginActivity.this, "Authentication Failed!", Toast.LENGTH_SHORT).show();
 
